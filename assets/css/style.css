@@ -1,0 +1,81 @@
+body {
+  background-color: rgba(129, 129, 129, 1);
+  color: white;
+}
+
+.container {
+  margin: 30px auto;
+  width: 300px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  box-shadow: 0 0px 10px 0 rgb(31, 255, 1);
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 150px;
+}
+
+.operation {
+  width: 100%;
+  height: 50%;
+}
+
+.result {
+  width: 100%;
+  height: 50%;
+  border-bottom: solid 1px #0c0c0c;
+  margin-bottom: 10px;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 375px;
+}
+
+.keyboard-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 20%;
+}
+
+.keyboard-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  font-size: 1.5rem;
+  background-color: #0c0c0c;
+  border-radius: 50% 50% / 50% 50%;
+  margin: 2px;
+}
+
+.keyboard-zero-button {
+  width: 50%;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.keyboard-button-operation {
+  color: rgb(31, 255, 1);
+}
+
+.keyboard-button-result {
+  color: white;
+  background-color: rgb(31, 255, 1);
+}
+
+.keyboard-button-clear {
+  color: rgb(255, 31, 0);
+}

@@ -57,6 +57,16 @@ body {
   background-color: #0c0c0c;
   border-radius: 50% 50% / 50% 50%;
   margin: 2px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.keyboard-button:hover {
+  background-color: #161212;
+}
+
+.keyboard-button:active {
+  transform: translateY(4px);
 }
 
 .keyboard-zero-button {
@@ -74,6 +84,10 @@ body {
 .keyboard-button-result {
   color: white;
   background-color: rgb(31, 255, 1);
+}
+
+.keyboard-button-result:hover {
+  background-color: rgb(31, 150, 1);
 }
 
 .keyboard-button-clear {

@@ -1,94 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
     <title>Calculator</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="display">
-            <div id="operation">
-            </div>
-            <div id="result">
-            </div>
+      <div class="display">
+        <div id="operation"></div>
+        <div id="result"></div>
+      </div>
+      <div class="keyboard">
+        <div class="keyboard-row">
+          <div
+            class="keyboard-button keyboard-button-clear keyboard-command"
+            id="clear"
+          >
+            AC
+          </div>
+          <div class="keyboard-button keyboard-command" id="dot">.</div>
+          <div class="keyboard-button keyboard-command" id="signal">+/-</div>
+          <div class="keyboard-button keyboard-button-operation" id="division">
+            ÷
+          </div>
         </div>
-        <div class="keyboard">
-            <div class="keyboard-row">
-                <div class="keyboard-button keyboard-button-clear" id="clear">
-                    AC
-                </div>
-                <div class="keyboard-button" id="dot">
-                    .
-                </div>
-                <div class="keyboard-button" id="signal">
-                    +/-
-                </div>
-                <div class="keyboard-button keyboard-button-operation" id="division">
-                    ÷
-                </div>
-            </div>
-            <div class="keyboard-row">
-                <div class="keyboard-button" id="seven">
-                    7
-                </div>
-                <div class="keyboard-button" id="eight">
-                    8
-                </div>
-                <div class="keyboard-button" id="nine">
-                    9
-                </div>
-                <div class="keyboard-button keyboard-button-operation" id="multiplication">
-                    x
-                </div>
-            </div>
-            <div class="keyboard-row">
-                <div class="keyboard-button" id="four">
-                    4
-                </div>
-                <div class="keyboard-button" id="five">
-                    5
-                </div>
-                <div class="keyboard-button" id="six">
-                    6
-                </div>
-                <div class="keyboard-button keyboard-button-operation" id="minus">
-                    -
-                </div>
-            </div>
-            <div class="keyboard-row">
-                <div class="keyboard-button" id="one">
-                    1
-                </div>
-                <div class="keyboard-button" id="two">
-                    2
-                </div>
-                <div class="keyboard-button" id="three">
-                    3
-                </div>
-                <div class="keyboard-button keyboard-button-operation" id="plus">
-                    +
-                </div>
-            </div>
-            <div class="keyboard-row">
-                <div class="keyboard-button keyboard-zero-button" id="zero">
-                    0
-                </div>
-                <div class="keyboard-button" id="backspace">
-                    <i class="fas fa-backspace"></i>
-                </div>
-                <div class="keyboard-button keyboard-button-result" id="equal">
-                    =
-                </div>
-            </div>
+        <div class="keyboard-row">
+          <div class="keyboard-button keyboard-digit">7</div>
+          <div class="keyboard-button keyboard-digit">8</div>
+          <div class="keyboard-button keyboard-digit keyboard-digit">9</div>
+          <div
+            class="keyboard-button keyboard-button-operation"
+            id="multiplication"
+          >
+            x
+          </div>
         </div>
+        <div class="keyboard-row">
+          <div class="keyboard-button keyboard-digit">4</div>
+          <div class="keyboard-button keyboard-digit">5</div>
+          <div class="keyboard-button keyboard-digit">6</div>
+          <div class="keyboard-button keyboard-button-operation" id="minus">
+            -
+          </div>
+        </div>
+        <div class="keyboard-row">
+          <div class="keyboard-button keyboard-digit">1</div>
+          <div class="keyboard-button keyboard-digit">2</div>
+          <div class="keyboard-button keyboard-digit">3</div>
+          <div class="keyboard-button keyboard-button-operation" id="plus">
+            +
+          </div>
+        </div>
+        <div class="keyboard-row">
+          <div class="keyboard-button keyboard-zero-button keyboard-digit">
+            0
+          </div>
+          <div class="keyboard-button keyboard-command" id="backspace">
+            <i class="fas fa-backspace"></i>
+          </div>
+          <div class="keyboard-button keyboard-button-result" id="equal">=</div>
+        </div>
+      </div>
     </div>
     <script src="assets/js/main.js"></script>
-</body>
-
+  </body>
 </html>

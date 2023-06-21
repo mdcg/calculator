@@ -32,11 +32,6 @@ let calculatorCommands = (event) => {
       }
       break;
     case "signal":
-      if (lastOperand.startsWith("-")) {
-        operationDisplay.innerHTML += ".";
-      } else {
-        
-      }
       break;
     case "backspace":
       operationDisplay.innerHTML = operationDisplay.innerHTML.slice(0, -1);

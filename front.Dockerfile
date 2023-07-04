@@ -4,8 +4,8 @@ RUN mkdir /app
 
 WORKDIR /app
 
-COPY ./assets /app/assets/
-COPY ./index.html /app/
+COPY ./front/assets /app/assets/
+COPY ./front/index.html /app/
 
 CMD python -m http.server 8888
 

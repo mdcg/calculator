@@ -101,3 +101,7 @@ body {
 .keyboard-button-clear {
   color: rgb(255, 31, 0);
 }
+
+.keyboard-command > .fas, .fa-backspace {
+  pointer-events: none;
+}

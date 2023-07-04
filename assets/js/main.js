@@ -1,9 +1,4 @@
-import {
-  calculatorCommands,
-  calculatorOperators,
-  calculatorOperands,
-  calculate,
-} from "./calculator_functions.js";
+import { calculatorCommands, calculatorOperators, calculatorOperands, calculate } from "./calculator_functions.js";
 
 let pressKey = (event) => {
   if (event.target.className.includes("keyboard-operand")) {
@@ -16,9 +11,7 @@ let pressKey = (event) => {
   calculate();
 };
 
-const keyboardButtons = Array.from(
-  document.getElementsByClassName("keyboard-button")
-);
+const keyboardButtons = Array.from(document.getElementsByClassName("keyboard-button"));
 
 keyboardButtons.forEach((element) => {
   element.addEventListener("click", pressKey);

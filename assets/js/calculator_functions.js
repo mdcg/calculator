@@ -1,10 +1,6 @@
-import {
-  getOperands,
-  getOperators,
-  getLastOperand,
-  parseOperand,
-} from "./helpers.js";
+import { getOperands, getOperators, getLastOperand, parseOperand } from "./helpers.js";
 import { operationDisplay, resultDisplay } from "./calculator_displayers.js";
+import { dotCommand, signalCommand, backspaceCommand, clearCommand, equalCommand } from "./calculator_commands.js";
 
 let translateCalculation = (a, b, op) => {
   a = parseOperand(a);
@@ -13,7 +9,7 @@ let translateCalculation = (a, b, op) => {
   switch (op) {
     case "+":
       return a + b;
-    case "-":
+    case "−":
       return a - b;
     case "*":
       return a * b;
@@ -23,51 +19,50 @@ let translateCalculation = (a, b, op) => {
 };
 
 let calculatorCommands = (event) => {
-  let lastOperand = getLastOperand(getOperands());
-  
   switch (event.target.id) {
     case "dot":
-      if (!lastOperand.includes(".")) {
-        operationDisplay.innerHTML += ".";
-      }
+      dotCommand();
       break;
     case "signal":
+      signalCommand();
       break;
     case "backspace":
-      operationDisplay.innerHTML = operationDisplay.innerHTML.slice(0, -1);
+      backspaceCommand();
       break;
     case "clear":
-      operationDisplay.innerHTML = "";
-      resultDisplay.innerHTML = "";
+      clearCommand();
+      break;
+    case "equal":
+      equalCommand();
       break;
   }
 };
 
 let calculatorOperators = (event) => {
-  switch (event.target.id) {
-    case "minus":
-      operationDisplay.innerHTML += "-";
-      break;
-    case "plus":
-      operationDisplay.innerHTML += "+";
-      break;
-    case "division":
-      operationDisplay.innerHTML += "/";
-      break;
-    case "multiplication":
-      operationDisplay.innerHTML += "*";
-      break;
-    case "equal":
-      if (getOperands().length > 1) {
-        operationDisplay.innerHTML = resultDisplay.innerHTML;
-        resultDisplay.innerHTML = "";
-      }
-      break;
+  let operands = getOperands();
+  let operators = getOperators();
+
+  if (operators.length < operands.length) {
+    switch (event.target.id) {
+      case "minus":
+        operationDisplay.innerHTML += "−";
+        break;
+      case "plus":
+        operationDisplay.innerHTML += "+";
+        break;
+      case "division":
+        operationDisplay.innerHTML += "/";
+        break;
+      case "multiplication":
+        operationDisplay.innerHTML += "*";
+        break;
+    }
   }
 };
 
 let calculatorOperands = (event) => {
   operationDisplay.innerHTML += event.target.innerHTML.trim();
+  getOperands();
 };
 
 let calculate = () => {
@@ -86,9 +81,4 @@ let calculate = () => {
   }
 };
 
-export {
-  calculatorCommands,
-  calculatorOperators,
-  calculatorOperands,
-  calculate,
-};
+export { calculatorCommands, calculatorOperators, calculatorOperands, calculate };
